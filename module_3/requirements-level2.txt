@@ -1,0 +1,35 @@
+# Requirements for Level 2: Basic Production
+# Purpose: Small-scale production deployment for startups
+# Target: 10-50 users, single server, Docker Compose
+
+# Include Level 1 requirements
+-r requirements-level1.txt
+
+# Time-Series Database
+influxdb-client==1.39.0
+
+# Relational Database (PostgreSQL)
+sqlalchemy==2.0.25
+asyncpg==0.29.0
+alembic==1.13.1
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Rate Limiting
+slowapi==0.1.9
+
+# Caching
+redis[hiredis]==5.0.1
+
+# Enhanced Logging
+loguru==0.7.2
+
+# Email Support (for alerts)
+aiosmtplib==3.0.1
+emails==0.6.0
+
+# Configuration Management
+pyyaml==6.0.1

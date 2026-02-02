@@ -1,0 +1,35 @@
+# Requirements for Level 3: Intermediate (Monitoring/Logging)
+# Purpose: Mid-scale environment with full observability
+# Target: 50-500 users, multi-container, comprehensive monitoring
+
+# Include Level 2 requirements
+-r requirements-level2.txt
+
+# OpenTelemetry (Distributed Tracing)
+opentelemetry-api==1.22.0
+opentelemetry-sdk==1.22.0
+opentelemetry-instrumentation-fastapi==0.43b0
+opentelemetry-instrumentation-logging==0.43b0
+opentelemetry-exporter-otlp==1.22.0
+
+# Prometheus Integration
+prometheus-client==0.20.0
+prometheus-fastapi-instrumentator==6.1.0
+
+# Structured Logging
+structlog==24.1.0
+
+# Error Tracking (Sentry)
+sentry-sdk[fastapi]==1.40.0
+
+# Async Task Queue
+celery[redis]==5.3.4
+flower==2.0.1
+
+# Enhanced Data Validation
+email-validator==2.1.0
+phonenumbers==8.13.27
+
+# Metrics & Performance
+py-spy==0.3.14
+memory-profiler==0.61.0
