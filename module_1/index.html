@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시스템 모니터링 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ 시스템 모니터링 대시보드</h1>
+            <div class="status-indicator">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">연결 중...</span>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- CPU 모니터링 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>CPU 사용률</h2>
+                    <span class="value" id="cpuValue">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="cpuProgress"></div>
+                </div>
+                <canvas id="cpuChart" width="300" height="150"></canvas>
+            </div>
+
+            <!-- 메모리 모니터링 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>메모리 사용률</h2>
+                    <span class="value" id="memValue">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="memProgress"></div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">사용중</span>
+                        <span class="stat-value" id="memUsed">0 GB</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">전체</span>
+                        <span class="stat-value" id="memTotal">0 GB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디스크 모니터링 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>디스크 사용률</h2>
+                    <span class="value" id="diskValue">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="diskProgress"></div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">사용중</span>
+                        <span class="stat-value" id="diskUsed">0 GB</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">전체</span>
+                        <span class="stat-value" id="diskTotal">0 GB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 네트워크 모니터링 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>네트워크</h2>
+                </div>
+                <div class="network-stats">
+                    <div class="network-item">
+                        <span class="network-icon">⬇️</span>
+                        <div>
+                            <div class="network-label">다운로드</div>
+                            <div class="network-value" id="netDown">0 KB/s</div>
+                        </div>
+                    </div>
+                    <div class="network-item">
+                        <span class="network-icon">⬆️</span>
+                        <div>
+                            <div class="network-label">업로드</div>
+                            <div class="network-value" id="netUp">0 KB/s</div>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="networkChart" width="300" height="150"></canvas>
+            </div>
+
+            <!-- 시스템 정보 -->
+            <div class="card wide">
+                <div class="card-header">
+                    <h2>시스템 정보</h2>
+                </div>
+                <div class="system-info">
+                    <div class="info-row">
+                        <span class="info-label">호스트명:</span>
+                        <span class="info-value" id="hostname">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">OS:</span>
+                        <span class="info-value" id="os">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">가동 시간:</span>
+                        <span class="info-value" id="uptime">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">마지막 업데이트:</span>
+                        <span class="info-value" id="lastUpdate">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로세스 목록 -->
+            <div class="card wide">
+                <div class="card-header">
+                    <h2>상위 프로세스 (CPU)</h2>
+                </div>
+                <table class="process-table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>이름</th>
+                            <th>CPU %</th>
+                            <th>메모리</th>
+                        </tr>
+                    </thead>
+                    <tbody id="processTable">
+                        <tr>
+                            <td colspan="4" class="no-data">데이터를 불러오는 중...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p>갱신 주기: <span id="refreshRate">1</span>초 |
+               데이터 포인트: <span id="dataPoints">0</span></p>
+        </footer>
+    </div>
+
+    <script src="chart.js"></script>
+    <script src="monitor.js"></script>
+</body>
+</html>

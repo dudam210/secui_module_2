@@ -1,0 +1,24 @@
+{
+  "name": "system-monitoring-dashboard",
+  "version": "1.0.0",
+  "description": "JavaScript 기반 실시간 시스템 모니터링 웹 대시보드",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "monitoring",
+    "dashboard",
+    "system",
+    "realtime",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
