@@ -23,14 +23,29 @@
 - [ ] 빌드 없는 배포 환경 구성
 
 ### Module 3: 고급 백엔드 시스템
-- [ ] Python FastAPI 기반 REST API 서버 구축
-- [ ] psutil을 이용한 시스템 메트릭 수집기 구현
-  - [ ] CPU 메트릭 수집기
-  - [ ] 메모리 메트릭 수집기
-  - [ ] 디스크 메트릭 수집기
-  - [ ] 네트워크 메트릭 수집기
-  - [ ] 프로세스 모니터 구현
-- [ ] 시계열 데이터베이스 구현
+- [x] Python FastAPI 기반 REST API 서버 구축
+- [x] psutil을 이용한 시스템 메트릭 수집기 구현
+  - [x] CPU 메트릭 수집기
+  - [x] 메모리 메트릭 수집기
+  - [x] 디스크 메트릭 수집기
+  - [x] 네트워크 메트릭 수집기
+  - [x] 프로세스 모니터 구현
+- [x] 인메모리 스토리지 구현 (Level 1)
+- [x] APScheduler를 이용한 주기적 메트릭 수집
+- [x] API 엔드포인트 구현
+  - [x] `/api/v1/metrics/current` - 현재 메트릭
+  - [x] `/api/v1/metrics/cpu` - CPU 시계열 데이터
+  - [x] `/api/v1/metrics/memory` - 메모리 시계열 데이터
+  - [x] `/api/v1/metrics/disk` - 디스크 시계열 데이터
+  - [x] `/api/v1/metrics/network` - 네트워크 시계열 데이터
+  - [x] `/api/v1/metrics/processes` - 프로세스 목록
+  - [x] `/api/v1/health` - 헬스체크
+- [x] 5단계 기술 스택 레벨 정의 및 문서화
+- [x] Requirements 파일 생성 (Level 1-5)
+- [x] Docker Compose 파일 생성 (Level 2-3)
+- [x] 기술 스택 가이드 작성
+- [x] 마이그레이션 가이드 작성
+- [ ] 시계열 데이터베이스 구현 (Level 2+)
   - [ ] InfluxDB 통합
   - [ ] SQLite 대체 옵션 구현
 - [ ] 데이터 보관 정책 구현
@@ -38,15 +53,6 @@
   - [ ] 1분 해상도: 7일 보관
   - [ ] 5분 해상도: 30일 보관
   - [ ] 1시간 해상도: 1년 보관
-- [ ] APScheduler를 이용한 주기적 메트릭 수집
-- [ ] API 엔드포인트 구현
-  - [ ] `/api/v1/metrics/current` - 현재 메트릭
-  - [ ] `/api/v1/metrics/cpu` - CPU 시계열 데이터
-  - [ ] `/api/v1/metrics/memory` - 메모리 시계열 데이터
-  - [ ] `/api/v1/metrics/disk` - 디스크 시계열 데이터
-  - [ ] `/api/v1/metrics/network` - 네트워크 시계열 데이터
-  - [ ] `/api/v1/metrics/processes` - 프로세스 목록
-  - [ ] `/api/v1/health` - 헬스체크
 - [ ] 알림 시스템 구현
   - [ ] 임계값 기반 알림 로직
   - [ ] 이메일 알림 구현

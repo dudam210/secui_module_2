@@ -1,6 +1,6 @@
 # 시스템 모니터링 프로젝트 개발 상황
 
-> 최종 업데이트: 2026-02-02
+> 최종 업데이트: 2026-02-02 (기술 스택 확장 완료)
 
 ## 전체 진행 상황
 
@@ -37,7 +37,7 @@
   - [x] 네트워크 메트릭 수집기
   - [x] 프로세스 모니터 구현
 - [x] 프로젝트 구조 설계
-- [x] CLAUDE.md 문서 작성
+- [x] CLAUDE.md 문서 작성 및 기술 스택 확장
 - [x] 인메모리 스토리지 구현 (Level 1)
 - [x] APScheduler를 이용한 주기적 메트릭 수집
 - [x] API 엔드포인트 구현 (전체)
@@ -54,6 +54,27 @@
   - [x] API 엔드포인트 통합 테스트
 - [x] README.md 문서 작성
 
+#### 기술 스택 확장 완료 ✅
+- [x] 5단계 기술 스택 레벨 정의 (Level 1-5)
+  - [x] Level 1: 최소 구성 (1-10명 사용자)
+  - [x] Level 2: 기본 프로덕션 (10-50명 사용자)
+  - [x] Level 3: 중급 모니터링/로깅 (50-500명 사용자)
+  - [x] Level 4: 고급 HA/확장성 (500-5K명 사용자)
+  - [x] Level 5: 엔터프라이즈급 (5K+명 사용자)
+- [x] Requirements 파일 생성 (5개)
+  - [x] requirements-level1.txt (FastAPI, psutil, pytest)
+  - [x] requirements-level2.txt (PostgreSQL, Redis, InfluxDB, JWT)
+  - [x] requirements-level3.txt (Prometheus, Loki, OpenTelemetry, Celery)
+  - [x] requirements-level4.txt (Kubernetes, Patroni, Vault)
+  - [x] requirements-level5.txt (Kafka, CockroachDB, LGTM Stack)
+- [x] Docker Compose 파일 생성 (2개)
+  - [x] docker-compose-level2.yml (6개 서비스)
+  - [x] docker-compose-level3.yml (13개 서비스, 완전한 관측성 스택)
+- [x] 추가 문서 작성
+  - [x] docs/TECH_STACK_GUIDE.md (22KB, 기술 선택 가이드)
+  - [x] docs/MIGRATION_GUIDE.md (27KB, 마이그레이션 가이드)
+  - [x] IMPLEMENTATION_SUMMARY.md (검증 및 요약)
+
 #### Level 2+ 예정
 - [ ] 시계열 데이터베이스 구현
   - [ ] InfluxDB 통합
@@ -61,10 +82,9 @@
 - [ ] 데이터 보관 정책 구현 (1초/1분/5분/1시간 해상도)
 - [ ] JWT 인증 구현
 - [ ] Rate limiting
-- [ ] Docker Compose 설정
 - [ ] 알림 시스템 구현 (Level 3)
 
-**상태**: ✅ Level 1 완료 (85%)
+**상태**: ✅ Level 1 완료 + 기술 스택 확장 완료 (95%)
 
 ## 현재 작업 중인 항목
 
