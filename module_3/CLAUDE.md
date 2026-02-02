@@ -27,9 +27,9 @@
 
 ## Skills
    **Git commit**
-   - 사용자가 Git commit을 요청 할때 `C:\Users\student\Desktop\vibe_coding\module_3\.claude\skills\git-commit\SKILL.md`를 참고하여 Git commit을 수행한다.
+   - 사용자가 Git commit을 요청 할때 /c/Users/student/Desktop/vibe_coding/module_3/.claude/skills/git-commit/SKILL.md를 참고하여 Git commit을 수행한다.
    **Code review**
-- 사용자가 Python코드 리뷰를 요청 할때 `C:\Users\student\Desktop\vibe_coding\module_3\.claude\skills\code-review\SKILL.md`를 참고하여 코드 리뷰를 수행한다.
+- 사용자가 Python코드 리뷰를 요청 할때 /c/Users/student/Desktop/vibe_coding/module_3/.claude/skills/code-review/SKILL.md를 참고하여 코드 리뷰를 수행한다.
 
 ## 기술 스택 상세
 

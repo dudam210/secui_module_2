@@ -24,6 +24,7 @@
 
 ### Module 3: 고급 백엔드 시스템
 - [x] Python FastAPI 기반 REST API 서버 구축
+- [x] Claude Code Skills 설정 (git-commit, code-review)
 - [x] psutil을 이용한 시스템 메트릭 수집기 구현
   - [x] CPU 메트릭 수집기
   - [x] 메모리 메트릭 수집기
